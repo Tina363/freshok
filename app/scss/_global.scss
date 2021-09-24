@@ -40,7 +40,6 @@ margin-bottom: 12px;
 
 .logo {
   display: block;
-
 }
 
 .link {
@@ -64,6 +63,7 @@ margin-bottom: 12px;
   text-align: center;
   border-radius: 6px;
   padding: 12px 24px;
+  cursor: pointer;
 }
 
 .animation-btn:hover,
@@ -79,6 +79,7 @@ margin-bottom: 12px;
 .animation:hover {
 background-color: $green-1000;
 }
+
 .animation:active{
   opacity: color 0.5;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -87,9 +88,6 @@ background-color: $green-1000;
 .animation:focus {
   background: $green-900;
   box-shadow: 0px 0px 0px 4px $green-200;
- 
-}
-.main {
 }
 
 .sr-only {
