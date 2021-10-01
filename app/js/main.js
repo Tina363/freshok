@@ -1,7 +1,7 @@
 $(function(){
-  $('.slider__wrapper').slick({
-    prevArrow: '<button type="button" class="slider__arrow-left"></button>',
-    nextArrow: '<button type="button" class="slider__arrow-right"></button>',
+  $('.main-slider__wrapper').slick({
+    prevArrow: '<button type="button" class="main-slider__arrow-left"></button>',
+    nextArrow: '<button type="button" class="main-slider__arrow-right"></button>',
     fade: true, 
     // autoplay: true,
     // autoplaySpeed: 5000

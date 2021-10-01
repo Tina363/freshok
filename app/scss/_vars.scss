@@ -12,11 +12,23 @@ $silver-600: #c1c1c1;
 $silver-100: #f6f6f6;
 $white: #ffffff;
 
+$border-accent: 6px;
+
+$line-height: 1;
+
 %opensans {
-  font-family: 'OpenSans';
+  font-family: 'OpenSans', sans-serif;
 }
 
 %ruda {
-  font-family: 'Ruda';
+  font-family: 'Ruda', sans-serif;
+}
+
+@mixin text-overflow {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  ext-overflow: ellipsis;
 }
 
