@@ -1,0 +1,33 @@
+.menu {
+  display: flex;
+
+  &__item {
+    background-repeat: no-repeat;
+    background-position: left;
+    
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+    
+    &--delivery {
+      padding-left: 44px;
+      background-image: url('../images/icons/nav-icons/icon-del-address.svg');
+      background-size: 32px 22px;
+    }
+
+    &--tel {
+      background-image: url('../images/icons/nav-icons/icon-tel.svg');
+      padding-left: 33px;
+      background-size: 22px 21px;
+      margin-left: 24px;
+    }
+  }
+
+  &__link {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: $white;
+    text-transform: uppercase;
+  }
+}

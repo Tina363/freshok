@@ -1,0 +1,110 @@
+.product-card {
+  padding: 55px 18px 58px 18px;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  border-radius: $border-accent;
+  color: $dark-900;
+  max-width: 300px;
+  width: 100%;
+  text-align: left;
+  transition: border 0.5s;
+  position: relative;
+
+  &:hover {
+    border: 1px solid $green-900;
+  }
+
+  &__heart {
+    position: absolute;
+    top: 18px;
+    right: 12px;
+
+    &:hover {
+      path {
+        fill: $yellow-900;
+      }
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  &__desc {
+    height: 60px;
+    font-weight: 600;
+    @include line-clamp;
+  }
+
+  &__prices {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 16px;
+    left: 21px;
+  }
+
+  &__price {
+    display: inline-block;
+    line-height: $line-height;
+    margin-bottom: 3px;
+
+    &--old {
+      color: $silver-600;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 44px;
+        height: 1px;
+        border: 1px solid $silver-600;
+        transform: rotate(-15deg);
+        bottom: 4px;
+        left: 0;
+      }
+    }
+  }
+
+  &__available {
+    font-size: 10px;
+    line-height: $line-height;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    
+    &--yes {
+      color:$green-900
+    }
+
+    &--ends {
+      color: $red-900;
+    }
+
+    &--end {
+      color: $silver-600;
+    }
+  }
+
+  &__rate {
+    font-weight: 700;
+    line-height: $line-height;
+    position: absolute;
+    bottom: 12px;
+    right: 30px;
+  }
+
+  &__star {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+  }
+
+  &__cart {
+    padding: 4px 8px 5px;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+  }
+}

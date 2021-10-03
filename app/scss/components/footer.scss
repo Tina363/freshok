@@ -1,0 +1,85 @@
+.footer {
+  background-color: $dark-800;
+  color: $white;
+  letter-spacing: normal;
+  padding-top: 30px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+
+  &__stock {
+    margin-right: 62px;
+  }
+
+  &__text {
+    margin-bottom: 15px;
+  }
+
+  &__input {
+    padding: 10px;
+    border-radius: 6px 0px 0px 6px;
+    max-width: 180px;
+    color: #4F4F4F;
+
+    &:focus::placeholder,
+    &:hover::placeholder {
+      color: $green-900;
+    }
+  }
+
+  &__btn {
+    border-radius: 0px 6px 6px 0px;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 12px 13px;
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  &__items {
+    column-count: 3;
+    column-gap: 74px;
+  }
+
+  &__item {
+    margin-bottom: 18px;
+  }
+  
+  &__address {
+    font-style: normal
+  }
+
+  &__contact {
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    } 
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__bottom {
+    background-color: $dark-800;
+    padding: 28px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  &__pay {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__carts {
+    display: flex;
+  }
+
+  &__cart {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+}

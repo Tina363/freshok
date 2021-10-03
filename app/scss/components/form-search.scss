@@ -1,0 +1,52 @@
+.form-search {
+  background-color: $white;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 576px;
+  width: 100%;
+  
+  &__label {
+    background-image: url('../images/icons/nav-icons/icon-search.svg');
+    background-repeat: no-repeat;
+    background-size: 22px 22px;
+    background-position: 10px;
+    width: 50px;
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 13px 15px 13px 50px;
+    border: 3px solid transparent;
+    border-radius: 6px 0 0 6px;
+    transition: border 0.5s;
+
+    &:hover,
+    &:focus {
+      border: 3px solid rgba(18, 18, 18, 0.5);
+    } 
+  }
+        
+  &__btn {
+    background-color: $dark-900;
+    border-radius: 0 6px 6px 0;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 16px 52px;
+
+    &:hover {
+      background: rgba(49, 53, 43, 0.85);
+    }
+    
+    &:active {
+      opacity: color 0.5;
+    }
+    
+    &:focus {
+      background-color: $dark-900;
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.filter-block {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  &__btn {
+    font-size: 15px;
+    font-weight: 700;
+    border: 3px solid transparent;
+    background-color: transparent;
+    text-transform: uppercase;
+    border-radius: 0;
+    transition: border-bottom 0.5s;
+
+    &:hover,
+    &:active {
+      border-bottom: 3px solid rgba(99, 166, 14, 0.2);
+      }
+    }
+
+  &__btn.mixitup-control-active {
+    border-bottom: 3px solid rgba(99, 166, 14, 0.2);
+  }
+}
