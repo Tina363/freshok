@@ -1,0 +1,29 @@
+.badges {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+
+  &__item {
+    float: left;
+    clear: left;
+    color: $white;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 2px 5px;
+    border-radius: $border-accent;
+    margin-bottom: 6px;
+    
+    &--new {
+      background: $green-900;
+    }
+
+    &--discount {
+      background: $red-900;
+    }
+
+    &--hit {
+      background: $orange-900;
+    }
+  }
+}

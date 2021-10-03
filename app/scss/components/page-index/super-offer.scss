@@ -1,0 +1,17 @@
+.super-offer {
+  padding: 69px 0;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+
+    & li {
+      &:first-child {
+      grid-column: span 2;
+      }
+    }
+  }
+}

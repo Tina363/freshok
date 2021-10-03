@@ -1,0 +1,40 @@
+.banner-card {
+  padding: 79px 31px;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid transparent;
+  transition: color 0.5s;
+    
+  &:hover {
+    color: $white;
+  }
+
+  &:hover a {
+    border-bottom: 2px solid $white;
+  }
+  
+  & p {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: $line-height;
+    letter-spacing: 0.1em;
+    margin-bottom: 18px;
+  }
+
+  & h3 {
+    @extend %ruda;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: normal;
+    margin-bottom: 8px;
+    max-width: 70%;
+  }
+
+  & a {
+    font-weight: 700;
+    line-height: $line-height;
+    letter-spacing: normal;
+    border-bottom: 2px solid $dark-500;
+    padding-bottom: 6px;
+    transition: border-bottom 0.3s;
+  }
+}

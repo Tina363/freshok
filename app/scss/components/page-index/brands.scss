@@ -1,0 +1,15 @@
+.brands {
+  &__list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__item {
+    opacity: 0.5;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
