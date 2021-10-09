@@ -1,0 +1,53 @@
+.super-offer {
+  padding: 69px 0;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+
+  @include r($sm) {
+    padding: 47px 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-gap: 30px;
+    
+    @include r($xxl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include r($xl) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 300px);
+      grid-gap: 20px;
+    }
+
+    @include r($sm) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 300px);
+      grid-gap: 20px;
+    }
+
+    & li {
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+
+      @include r($xl) {
+        grid-column: span 2;
+      }
+
+      &:first-child {
+        grid-column: span 2;
+
+        @include r($xxl) {
+          grid-column: span 1;
+        }
+
+        @include r($xl) {
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+}

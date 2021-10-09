@@ -4,10 +4,18 @@
   letter-spacing: normal;
   padding-top: 30px;
 
+  @include r($sm) {
+    // text-align: center;
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
+
+    @include r($sm) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__stock {
@@ -20,7 +28,7 @@
 
   &__input {
     padding: 10px;
-    border-radius: 6px 0px 0px 6px;
+    border-radius: 6px 0 0 6px;
     max-width: 180px;
     color: #4F4F4F;
 
@@ -31,7 +39,7 @@
   }
 
   &__btn {
-    border-radius: 0px 6px 6px 0px;
+    border-radius: 0 6px 6px 0;
     font-size: 12px;
     text-transform: uppercase;
     padding: 12px 13px;
@@ -39,30 +47,8 @@
     letter-spacing: normal;
   }
 
-  &__items {
-    column-count: 3;
-    column-gap: 74px;
-  }
-
-  &__item {
-    margin-bottom: 18px;
-  }
-  
-  &__address {
-    font-style: normal
-  }
-
-  &__contact {
-    &:not(:last-child) {
-      margin-bottom: 18px;
-    } 
-
-    &:last-child {
-      margin-bottom: 20px;
-    }
-  }
-
   &__bottom {
+    text-align: center;
     background-color: $dark-800;
     padding: 28px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -71,10 +57,21 @@
   &__pay {
     display: flex;
     justify-content: space-between;
+
+    @include r($sm) {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
   }
 
   &__carts {
     display: flex;
+
+    @include r($sm) {
+      
+      justify-content: center;
+      margin-bottom: 24px;
+    }
   }
 
   &__cart {

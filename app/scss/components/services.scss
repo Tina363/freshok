@@ -1,24 +1,33 @@
 .services {
   background-color: $silver-100;
   padding: 49px 0 29px;
+
+  @include r($sm) {
+    padding: 31px 15px;
+  }
   
   &__items {
     max-width: 925px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+
+    @include r($sm) {
+      display: block;
+    }
   }
   
   &__item {
-    max-width: 264px;
+    max-width: 270px;
     width: 100%;
-    background-size: 50px 50px;
-    background-position: left top;
+    background-size: 50px 45px;
+    // background-position: left top;
     background-repeat: no-repeat;
     position: relative;
-    padding-left: 74px;
+    padding-left: 90px;
+    background-position: 7% top;
     letter-spacing: normal;
-
+    
     &--del {
       background-image: url('../images/icons/service-icons/scooter.svg');
     }
@@ -30,12 +39,20 @@
     &--support {
       background-image: url('../images/icons/service-icons/24-hours.svg');
     }
+
+    @include r($sm) {
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
-    font-size: 16px;
     font-weight: 600;
     color: $dark-900;
     margin-bottom: 6px;
+    @include line-clamp(16, 1.4, 2);
+  }
+
+  &__text {
+    @include line-clamp(14, 1.4, 3);
   }
 }

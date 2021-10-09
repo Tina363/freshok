@@ -1,0 +1,36 @@
+.brands {
+  
+  &__list {
+    margin-bottom: 20px;
+ }
+ 
+  &__item {
+    
+  }
+
+  &__link {
+    opacity: 0.5;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 1;
+    } 
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+}
+
+.slick-active button  {
+  background-color: $green-900;
+}
+
+.slick-dots button {
+  margin-right: 20px;
+  font-size: 0;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: $green-200;
+}

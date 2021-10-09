@@ -1,0 +1,12 @@
+.address {
+  
+  &__contact {
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    } 
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+}

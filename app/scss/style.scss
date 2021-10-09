@@ -6,22 +6,27 @@
 @import 'global';
 
 @import 'components/menu';
+@import 'components/nav-list';
 @import 'components/header';
+@import 'components/burger';
 @import 'components/form-search';
-@import 'components/page-index/main-slider';
+@import 'components/search';
+@import 'components/home-page/main-slider';
 @import 'components/user';
 @import 'components/services';
-@import 'components/page-index/top-products';
+@import 'components/home-page/top-products';
 @import 'components/filter-block';
 @import 'components/product-card';
 @import 'components/badges';
-@import 'components/page-index/super-offer';
+@import 'components/home-page/super-offer';
 @import 'components/banner-card';
-@import 'components/page-index/product-sale';
-@import 'components/page-index/brands';
-@import 'components/page-index/our-news';
+@import 'components/home-page/product-sale';
+@import 'components/home-page/brands';
+@import 'components/home-page/our-news';
 @import 'components/news-card';
 @import 'components/footer';
+@import 'components/address';
+@import 'components/list-links';
 @import 'components/socials';
 
 

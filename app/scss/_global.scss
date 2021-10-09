@@ -14,7 +14,20 @@ color: $dark-500;
 background-color: $white;
 display: flex;
 flex-direction: column;
+
+&.lock {
+  overflow: hidden;
+  }
+
+  &.active {
+    background-color: rgba(193, 193, 193, 0.3);
+  }
 }
+
+// path {
+//   fill:inherit;
+//   stroke:inherit;
+// }
 
 .main {
   flex-grow: 1;
@@ -28,6 +41,10 @@ flex-direction: column;
 
 .section {
   padding: 72px 0;
+
+  @include r($sm) {
+    padding: 48px 0;
+  }
 }
 
 .sr-only {
@@ -43,18 +60,35 @@ flex-direction: column;
   overflow: hidden;
 }
 
+.logo {
+  object-fit: cover;
+
+  @include r($xl) {
+    display: none;
+  }
+}
+
+.logo-short {
+  object-fit: cover;
+  display: none;
+
+  @include r($xl) {
+    display: block;
+  }
+}
+
 .title {
   @extend %ruda;
   font-weight: 600;
+  @include adaptiv-font(32, 24);
   text-transform: uppercase;
-  font-size: 32px;
   color: $dark-900;
-  margin-bottom: 30px;
+  margin-bottom: calc(24px + (28 - 24) * ((100vw - 375px)/(1320 - 375)));
   letter-spacing: 0.04em;
 }
 
 .button {
-  font-size: 18px;
+  @include adaptiv-font (18, 14); 
   letter-spacing: inherit;
   background-color: $green-900;
   color: $white;
@@ -80,9 +114,19 @@ flex-direction: column;
 }
 
 .anim-hover {
+  
   &:hover {
     opacity: 0.7;
     transition: opacity 0.5s;
+  }
+}
+
+.link-hover {
+  transition: color 0.5s;
+
+  &:hover,
+  &:focus {
+    color: $green-900;
   }
 }
 

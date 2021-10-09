@@ -1,0 +1,101 @@
+.product-sale {
+  background-color: #F5F5F5;
+  text-align: center;
+
+  &__block {
+    display: grid;
+    grid-gap: 30px 30px;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-rows: repeat(2, 124px);
+    justify-content: center;
+    margin-bottom: 48px;
+
+    @include r($sm) {
+      grid-gap: 15px 15px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: row;
+    padding: 12px;
+    background-color: $white;
+  }
+
+  &__badges {
+    top: 12px;
+  }
+
+  &__img {
+    margin: 0 12px 0 0;
+    object-fit: cover;
+    max-width: 100px;
+    width: inherit;
+  }
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__desc {
+    flex-grow: 1;
+  }
+
+  &__available {
+    font-size: 10px;
+    line-height: $line-height;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    
+    &--yes {
+      color:$green-900
+    }
+
+    &--ends {
+      color: $red-900;
+    }
+
+    &--end {
+      color: $silver-600;
+    }
+  }
+
+  &__rate {
+    font-weight: 700;
+    line-height: $line-height;
+    position: absolute;
+    bottom: 12px;
+    right: 30px;
+  }
+
+  &__star {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+  }
+  
+  &__prices {
+    flex-direction: row;
+    align-items: center;
+    left: 124px;
+    bottom: 7px;
+  }
+
+  &__price {
+    margin-right: 14px;
+    font-size: 20px;
+    font-weight: 600;
+    color: $dark-500;
+
+    & span {
+      font-size: 14px;
+    }
+    
+    &--old {
+      font-size: 12px;
+    }
+  }
+}

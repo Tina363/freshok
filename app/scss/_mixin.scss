@@ -1,7 +1,53 @@
-@mixin line-clamp {
-  overflow: hidden;
+@mixin line-clamp (
+  $font-size,
+  $line-height,
+  $lines-to-show
+) {
+  @if unitless($line-height) == false {
+    $line-height: create-unitless-line-height($font-size, $line-height);
+  }
+
+  display: block;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  font-size: $font-size + px;
+  max-height: ($font-size * $line-height * $lines-to-show) + px;
+  line-height: $line-height;
+  overflow: hidden;
+  text-overflow: ellipsis;
   -webkit-box-orient: vertical;
-  ext-overflow: ellipsis;
+  -webkit-line-clamp: $lines-to-show;
+}
+
+@mixin r($width) {
+  @media (max-width: $width + "px") {
+    @content;
+  }
+}
+
+@mixin adaptiv-font ($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+  @media (max-width: 767px) {
+    font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$max-width}));
+  }
+  @media (min-width: 767px) {
+    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$max-width}));
+  }
+}
+
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+  $addSize: $startSize - $minSize;
+  @if $type==1 {
+    #{$property}: $startSize + px;
+    @media (max-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 375) / #{$maxWidthContainer - 375}));
+    }
+  }
+  @else if $type==2 {
+    #{$property}: $startSize + px;
+    @media (min-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 375) / #{$maxWidthContainer - 375}));
+    }
+  }
+  
 }

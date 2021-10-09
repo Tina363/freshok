@@ -1,0 +1,28 @@
+.search {
+  position: relative;
+  display: none;
+  transition: background-color 0.5s;
+
+  @include r($xl) {
+    display: block;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../images/icons/nav-icons/icon-search-white.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 21px 20px;
+    border-radius: $border-accent;
+    width: 44px;
+    height: 44px;
+    left: -50px;
+    top: -20px;
+  }
+
+  &:hover::before,
+  &:active::before {
+    background-color: rgba(49,53,43,.1);;
+  }
+}
