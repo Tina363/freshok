@@ -5,7 +5,7 @@
   justify-content: space-between;
   max-width: 576px;
   width: 100%;
-  
+ 
   &__label {
     background-image: url('../images/icons/nav-icons/icon-search.svg');
     background-repeat: no-repeat;
@@ -25,7 +25,15 @@
     &:hover,
     &:focus {
       border: 3px solid rgba(18, 18, 18, 0.5);
+    
+      @include r($xl) {
+        border-radius: 0;
+      }
     } 
+  }
+
+  &__input.active {
+    border-radius: 0;
   }
         
   &__btn {
@@ -36,8 +44,17 @@
     text-transform: uppercase;
     padding: 16px 52px;
 
+    @include r($xl) {
+      padding: 6px 22px;
+    }
+
+    &__btn.active {
+      border-radius: 0;
+      padding: 15px 25px;
+    }
+
     &:hover {
-      background: rgba(49, 53, 43, 0.85);
+      background-color: rgba(49, 53, 43, 0.85);
     }
     
     &:active {

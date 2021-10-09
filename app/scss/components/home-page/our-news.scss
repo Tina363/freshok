@@ -6,10 +6,24 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
+
+    @include r($xl) {
+      display: block;
+      // margin-bottom: 24px;
+      text-align: center;
+    }
+
+    @include r($sm) {
+      text-align: left;
+    }
   }
 
   &__title {
     margin-bottom: 0;
+
+    @include r($xl) {
+      margin-bottom: 12px;
+    }
   }
 
   &__link {
@@ -31,7 +45,9 @@
   
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 410px);
+    grid-template-columns: repeat(auto-fit, minmax(285px, 410px));
     grid-gap: 30px;
+    justify-content: center;
+
   }
 }

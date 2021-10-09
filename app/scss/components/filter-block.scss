@@ -1,16 +1,25 @@
 .filter-block {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 48px;
+
+  @include r($sm) {
+    margin-bottom: 24px;
+  }
 
   &__item {
     &:not(:last-child) {
       margin-right: 24px;
+
+      @include r($sm) {
+        margin-right: 12px;
+      }
     }
   }
 
   &__btn {
-    font-size: 15px;
+    @include adaptiv-font(15, 14);
     font-weight: 700;
     border: 3px solid transparent;
     background-color: transparent;
